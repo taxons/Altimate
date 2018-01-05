@@ -1,0 +1,26 @@
+<div class="body">
+  <div class="wrapper">
+    <form class="form-signin" #myForm="ngForm">       
+      <h2 class="form-signin-heading">Login</h2>
+      <input type="text" autocomplete="off" class="form-control" [(ngModel)]="username"  name="username" placeholder="Email Address" required="" autofocus="" />
+      <input type="password" autocomplete="off" class="form-control" [(ngModel)]="password"  name="password" placeholder="Password" required=""/>      
+      <button class="btn btn-lg btn-primary btn-block" (click)="submitForm()" type="submit">Login</button>   
+			<br/>
+			<span class="error" >{{ error }}</span>
+		</form>
+		
+  </div>
+
+  <ul class="bg-bubbles">
+		<li></li>
+		<li></li>
+		<li></li>
+		<li></li>
+		<li></li>
+		<li></li>
+		<li></li>
+		<li></li>
+		<li></li>
+		<li></li>
+	</ul>
+</div>
