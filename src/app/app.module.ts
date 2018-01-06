@@ -1,3 +1,4 @@
+import { AltiService } from './page/alti.service';
 import { PageModule } from './page/page.module';
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
@@ -18,7 +19,7 @@ import { AuthService } from './core/auth.service';
 import { environment } from './../environments/environment';
 import { AngularFirestoreModule } from 'angularfire2/firestore';
 import { FormsModule, ReactiveFormsModule, FormGroup , Validators } from '@angular/forms';
-
+import { HttpClientModule, HttpClient } from '@angular/common/http';
 
 export const firebaseConfig = environment.firebaseConfig;
 
@@ -35,9 +36,10 @@ export const firebaseConfig = environment.firebaseConfig;
     AngularFireDatabaseModule,
     AngularFireAuthModule,
     AngularFirestoreModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    HttpClientModule
   ],
-  providers: [AuthGuardService, AuthService],
+  providers: [AuthGuardService, AuthService, AltiService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

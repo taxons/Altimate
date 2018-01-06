@@ -1,3 +1,81 @@
-<p>
-  alties works!
-</p>
+<div class="wrapper">
+        
+  <app-sidebar></app-sidebar>
+<div class="main-panel">
+  <app-navbar></app-navbar>
+  <div class="main-content" >
+          <div class="container-fluid">
+            <div class="row">
+              <div class="col-md-12">
+                  <div class="card">
+                      <div class="header">
+                          <h4 class="title">Future Alties</h4>
+                          <p class="category"></p>
+                      </div>
+                      <div class="content">
+                        <form #altiForm="ngForm">
+                          <div class="form-group">
+                            <label for="exampleFormControlInput1">Name</label>
+                            <input type="text" class="form-control" autocomplete="off" [(ngModel)]="alties.name" [ngModelOptions]="{standalone:true}" id="name" placeholder="Name">
+                          </div>
+                          <div class="form-group">
+                            <label for="exampleFormControlInput1">Email</label>
+                            <input type="email" class="form-control" autocomplete="off" [(ngModel)]="alties.email" [ngModelOptions]="{standalone:true}" id="email" placeholder="Email">
+                          </div>
+                          <div class="form-group">
+                            <label for="exampleFormControlInput1">Phone</label>
+                            <input type="text" class="form-control" autocomplete="off"  [(ngModel)]="alties.phone" [ngModelOptions]="{standalone:true}" id="phone" placeholder="">
+                          </div>
+                          <div class="form-group">
+                            <label for="exampleFormControlInput1">Age</label>
+                            <input type="text" class="form-control" autocomplete="off"  [(ngModel)]="alties.age" [ngModelOptions]="{standalone:true}" id="age" placeholder="">
+                          </div>
+                          <div class="form-group">
+                            <label for="exampleFormControlInput1" >Experiance(Years@Months)</label>
+                            <br/>
+                            <select class="form-control" style="width:200px;float:left;" [(ngModel)]="alties.experience.years" [ngModelOptions]="{standalone:true}" id="years">
+                              <option value="10">10</option>
+                              <option value="9">9</option>
+                              <option value="8">8</option>
+                              <option value="7">7</option>
+                              <option value="6">6</option>
+                              <option value="5">5</option>
+                              <option value="4">4</option>
+                              <option value="3">3</option>
+                            </select>
+                            <select class="form-control" style="width:200px;float:left;" [(ngModel)]="alties.experience.month" [ngModelOptions]="{standalone:true}" id="month">
+                              <option value="1">1</option>
+                              <option value="2">2</option>
+                              <option value="3">3</option>
+                              <option value="4">4</option>
+                              <option value="5">5</option>
+                              <option value="6">6</option>
+                              <option value="7" >7</option>
+                              <option value="8">8</option>
+                              <option value="9">9</option>
+                              <option value="10">10</option>
+                              <option value="11">11</option>
+                              <option value="12">12</option>
+                            </select>
+                            <br/><br/>
+                          </div>
+                        </form>
+  
+                      </div>
+                      <div class="form-group"  style="padding:30px">
+                          <label for="exampleFormControlInput1"></label>
+                        <button class="form-control"  type="submit" (click)="submitForm(alties)">Add Alties</button> 
+                      </div>
+                      <div class="form-group"  style="padding:30px;color:aquamarine;font-weight:400">
+                          <label for="exampleFormControlInput1" style="padding:30px;color:green;font-weight:400">{{status}}</label>
+                      </div>
+                  </div>
+              </div>
+              </div>
+           </div>
+  </div>
+  
+      <app-footer></app-footer>
+  
+</div>
+</div>

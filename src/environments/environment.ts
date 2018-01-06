@@ -12,5 +12,6 @@ export const environment = {
     projectId: 'zeroapp-bb183',
     storageBucket: 'zeroapp-bb183.appspot.com',
     messagingSenderId: '972899976121'
-  }
+  },
+  REST_API_URL: 'http://localhost:8080/'
 };

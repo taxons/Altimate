@@ -12,7 +12,8 @@ declare interface RouteInfo {
 
 export const ROUTES: RouteInfo[] = [
   { path: 'home', title: 'Dashboard',  icon: 'pe-7s-graph', class: '' },
-  { path: 'alties', title: 'GoAlties',  icon: 'pe-7s-user', class: '' }
+  { path: 'newalties', title: 'AddAlties',  icon: 'pe-7s-user', class: '' },
+  { path: 'alties', title: 'ViewAlties',  icon: 'pe-7s-user', class: '' }
 ];
 
 @Component({

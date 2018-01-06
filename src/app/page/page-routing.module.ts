@@ -1,3 +1,4 @@
+import { ViewAltiesComponent } from './viewAlties/viewAlties.component';
 import { AltiesComponent } from './alties/alties.component';
 import { AuthGuardService } from './../core/auth.guard';
 import { HomeComponent } from './home/home.component';
@@ -7,7 +8,8 @@ import { LoginComponent } from '../login/login.component';
 
 const pageRoutes: Routes = [
     {path: 'home', component: HomeComponent , canActivate: [AuthGuardService]},
-    {path: 'alties', component: AltiesComponent , canActivate: [AuthGuardService]}
+    {path: 'alties', component: ViewAltiesComponent , canActivate: [AuthGuardService]},
+    {path: 'newalties', component: AltiesComponent , canActivate: [AuthGuardService]}
   ];
 
   @NgModule({
