@@ -23,5 +23,9 @@ export class ViewAltiesComponent implements OnInit {
       alties => this.alties = alties,
       error => this.errorMessage = <any> error);
   }
+  viewAlti(altiId) {
+    console.log(altiId);
+    this.router.navigate(['alties' + '/' + altiId]);
+  }
 
 }

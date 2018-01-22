@@ -23,12 +23,26 @@ getAlties(): Observable<Alties[]> {
       .map((response: Response) => <Alties[]> response.json());
     //   .catch(this.handleError);
   }
+  getAltiesById(altiId: string): Observable<Alties> {
+    return this._http.get(this.entity_url + 'v1/manage/candidate/get?id=' + altiId)
+      .map((response: Response) => <Alties> response.json());
+    //   .catch(this.handleError);
+  }
   addAlties(alties: Alties): Observable<Alties> {
     const headers = new Headers();
     headers.append('Content-Type', 'application/json');
     headers.append('Accept', 'application/json');
     console.log(JSON.stringify(alties));
     return this._http.post(this.entity_url + 'v1/manage/candidate/add', JSON.stringify(alties), {headers})
+      .map((response: Response) => <Alties> response.json());
+    //   .catch(this.handleError);
+  }
+  ss(alties: Alties): Observable<Alties> {
+    const headers = new Headers();
+    headers.append('Content-Type', 'application/json');
+    headers.append('Accept', 'application/json');
+    console.log(JSON.stringify(alties));
+    return this._http.post(this.entity_url + 'v1/manage/schedue', JSON.stringify(alties), {headers})
       .map((response: Response) => <Alties> response.json());
     //   .catch(this.handleError);
   }

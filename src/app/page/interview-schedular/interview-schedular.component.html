@@ -1,3 +1,55 @@
-<p>
-  interview-schedular works!
-</p>
+<div class="wrapper">
+        
+    <app-sidebar></app-sidebar>
+  <div class="main-panel">
+    <app-navbar></app-navbar>
+    <div class="main-content" >
+            <div class="container-fluid">
+              <div class="row">
+                <div class="col-md-12">
+                    <div class="card">
+                        <div class="header">
+                            <h4 class="title">Candidate Information</h4>
+                            <p class="category"></p>
+                        </div>
+                        <div class="content">
+                      <table class="table table-striped">
+                        <tr>
+                          <th>Name</th>
+                          <td><b>{{alties.name}}</b></td>
+                        </tr>
+                        <tr>
+                          <th>Email</th>
+                          <td>{{alties.email}}</td>
+                        </tr>
+                        <tr>
+                          <th>HR Id</th>
+                          <td><input [(ngModel)]="hrid" [ngModelOptions]="{standalone:true}" type="text" id="hrid" /></td>
+                        </tr>
+                        <tr>
+                            <th>Date</th>
+                            <td><input type="text" [(ngModel)]="date" [ngModelOptions]="{standalone:true}" id="date" /></td>
+                          </tr>
+                          <tr>
+                              <th>Type</th>
+                              <td><input type="text" [(ngModel)]="type" [ngModelOptions]="{standalone:true}" id="type" /></td>
+                            </tr>
+                            <tr>
+                                <th></th>
+                                <td><button type="button" (click)="schudule()">Schedule</button></td>
+                              </tr>
+                       
+                          
+                      </table>
+                      </div>
+                    </div>
+                </div>
+                </div>
+             </div>
+    </div>
+    
+        <app-footer></app-footer>
+    
+  </div>
+  </div>
+
